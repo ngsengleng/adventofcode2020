@@ -6,6 +6,7 @@ data = list(map(lambda x: int(x), open(f, 'r').read().split('\n')))
 
 coords = [0, 25]
 target = 0
+
 # part 1
 while True:
     head = coords[0]
@@ -20,7 +21,7 @@ while True:
         coords = list(map(lambda x: x + 1, coords))
 
 
-
+# part 2
 window = []
 i = 0
 while i < len(data):
@@ -32,5 +33,4 @@ while i < len(data):
     window.append(data[i])
     
     i += 1
-print(window)
 print(min(window) + max(window))
